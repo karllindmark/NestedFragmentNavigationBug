@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/parentFragment">
+
+    <fragment android:id="@+id/parentFragment"
+              android:name="se.karllindmark.nestedfragmentnavigation.ParentFragment"
+              android:label="ParentFragment"
+              tools:layout="@layout/fragment_parent"/>
+
+    <fragment android:id="@+id/childFragment"
+              android:name="se.karllindmark.nestedfragmentnavigation.ChildFragment"
+              android:label="ChildFragment"
+              tools:layout="@layout/fragment_child">
+        <action android:id="@+id/toOtherFragment" app:destination="@id/otherFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/otherFragment"
+              android:name="se.karllindmark.nestedfragmentnavigation.OtherFragment"
+              android:label="OtherFragment"
+              tools:layout="@layout/fragment_other"/>
+</navigation>
